@@ -1,53 +1,45 @@
 # My Places Website
 
-This project is a Django web application for a university lab assignment. It serves as a personal website to manage and display reviews of various places.
+This is a simple website made with Django. It helps me keep track of places I've been and what I thought of them.
 
-## Features
+## How it works
 
-* **Homepage:** A feature that suggests a random place from the database.
-* **Place List:** A page that displays all the places with their reviews.
-* **Admin Panel:** An administrative interface to easily add, edit, and delete places.
+- **Main page:** Just a button that picks a random place for me.
+- **Places list:** Shows all the places I've added.
+- **Admin page:** This is where I add new places and reviews.
 
-## Getting Started
+## How to run it
 
-### Prerequisites
-
-Ensure you have Python 3.8 or a newer version installed on your system.
-
-### Installation
-
-Follow these steps to get a copy of the project up and running on your local machine.
-
-1.  **Clone the repository:**
+1.  **Get the code:**
     ```bash
-    git clone [https://github.com/your-username/my_places_website.git](https://github.com/your-username/my_places_website.git)
-    cd my_places_website
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    cd your-repo-name
     ```
 
-2.  **Create and activate a virtual environment:**
+2.  **Set up your Python environment:**
     ```bash
     python3 -m venv venv
     source venv/bin/activate
     ```
 
-3.  **Install dependencies:**
+3.  **Install what you need:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Run database migrations:**
+4.  **Set up the database:**
     ```bash
     python manage.py migrate
     ```
 
-5.  **Create a superuser to access the admin panel:**
+5.  **Create an admin account:**
     ```bash
     python manage.py createsuperuser
     ```
 
-6.  **Start the development server:**
+6.  **Start the website:**
     ```bash
     python manage.py runserver
     ```
 
-The application will be available at [http://127.0.0.1:8000](http://127.0.0.1:8000/).
+That's it! Open your browser and go to [http://127.0.0.1:8000](http://127.0.0.1:8000/) to see the website.
