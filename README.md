@@ -29,3 +29,4 @@ This is a simple Django website to keep track of places I've visited.
     ```bash
     python manage.py runserver
     ```
+5. See page at http://127.0.0.1:8000/
