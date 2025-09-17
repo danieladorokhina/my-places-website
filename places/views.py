@@ -34,8 +34,7 @@ def place_detail(request, place_id):
     place = get_object_or_404(Place, pk=place_id, user=user)
     return render(request, 'places/place_detail.html', {'place': place})
 
-def add_place(request):
-    """Сторінка додавання нового місця."""
+def add_place(request):    """Сторінка додавання нового місця."""
     user = User.objects.first()
     if request.method == 'POST':
         form = PlaceForm(request.POST)
