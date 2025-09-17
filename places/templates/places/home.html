@@ -1,0 +1,21 @@
+{% extends "places/base.html" %}
+{% block title %}Головна - Улюблені місця{% endblock %}
+{% block content %}
+    <h1>Вітаємо на сайті "Мої Улюблені Місця"!</h1>
+    <p>Тут ви можете зберігати і ділитися своїми улюбленими місцями для відпочинку, вечері чи розваг.</p>
+    <p>Ви можете переглянути 
+        <a href="{% url 'place_list' %}">повний список місць</a> або 
+        <a href="{% url 'add_place' %}">додати нове</a>.
+    </p>
+
+    <h2>Куди піти сьогодні?</h2>
+    <form method="post" action="{% url 'home' %}">
+        {% csrf_token %}
+        <button type="submit">Куди піти сьогодні?</button>
+    </form>
+
+    {% if random_place %}
+        <h3>Сьогодні рекомендуємо:</h3>
+        {% include 'places/place_preview.html' with place=random_place %}
+    {% endif %}
+{% endblock %}

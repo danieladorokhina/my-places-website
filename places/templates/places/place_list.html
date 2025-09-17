@@ -1,0 +1,14 @@
+{% extends "places/base.html" %}
+{% block title %}Список місць{% endblock %}
+{% block content %}
+    <h1>Мій список улюблених місць</h1>
+    {% if places %}
+        <div class="places-grid">
+            {% for place in places %}
+                {% include 'places/place_preview.html' %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>У вас ще немає улюблених місць. <a href="{% url 'add_place' %}">Додайте перше!</a></p>
+    {% endif %}
+{% endblock %}
